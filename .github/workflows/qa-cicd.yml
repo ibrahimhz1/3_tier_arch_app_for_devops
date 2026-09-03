@@ -32,7 +32,7 @@ jobs:
         with : 
           name : gitleaks-repot
           path : gitleaks-report.json
-          if-no-files-found : warm 
+          if-no-files-found : warn
 
 
 
