@@ -28,7 +28,7 @@ jobs:
           --exit-code 0
 
       - name: Upload Gitleaks report
-        users : actions/upload-artifact@4
+        uses : actions/upload-artifact@v4
         with : 
           name : gitleaks-repot
           path : gitleaks-report.json
