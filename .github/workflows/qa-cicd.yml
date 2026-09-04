@@ -131,19 +131,19 @@ jobs:
 
       - name: Run Trivy FS Scan on client (JSON)
         run: |
-          trivy fs ./client \ 
+          trivy fs ./client \
             --format json \
             --output client-trivy-fs-report.json \
             --severity HIGH,CRITICAL \
             --ignore-unfixed \
-            --exit-code 0 
+            --exit-code 0
 
       - name: Run Trivy FS Scan on client (TABLE)
         run: |
           trivy fs ./client \
             --format table \
             --severity HIGH,CRITICAL \
-            --ignore-unfixed \ 
+            --ignore-unfixed \
             --exit-code 0 > client-trivy-fs-report.txt
 
       - name: Upload Client Trivy JSON report 
@@ -183,19 +183,19 @@ jobs:
 
       - name: Run Trivy FS Scan on server (JSON)
         run: |
-          trivy fs ./server \ 
+          trivy fs ./server \
             --format json \
             --output server-trivy-fs-report.json \
             --severity HIGH,CRITICAL \
             --ignore-unfixed \
-            --exit-code 0 
+            --exit-code 0
 
       - name: Run Trivy FS Scan on server (TABLE)
         run: |
           trivy fs ./server \
             --format table \
             --severity HIGH,CRITICAL \
-            --ignore-unfixed \ 
+            --ignore-unfixed \
             --exit-code 0 > server-trivy-fs-report.txt
 
       - name: Upload Server Trivy JSON report 
