@@ -7,8 +7,8 @@ COPY client/ ./
 RUN npm run build
 
 WORKDIR /usr/src/app/server
-COPY server/package.*.json ./
-RUN npm install --omit=dev --no-audit --no-fund
+COPY server/package*.json ./
+RUN npm install --omit=dev
 COPY server/ ./
 
 RUN mkdir -p ./public && cp -R /usr/src/app/client/public/* ./public/
