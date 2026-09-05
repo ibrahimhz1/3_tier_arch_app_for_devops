@@ -422,7 +422,7 @@ jobs:
             ibrahimcentra/node-app:${{ github.sha }}
             ibrahimcentra/node-app:latest
 
-      - name: Install Trivy
+      - name: Install Trivy 
         uses: aquasecurity/setup-trivy@v0.2.6
         with:
           version: latest
