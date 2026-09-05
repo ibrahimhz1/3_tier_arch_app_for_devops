@@ -10,7 +10,7 @@ on:
 
 jobs:
   gitleaks-scan: 
-    name: Gitleaks Scan
+    name: Gitleaks Scan 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source Code
