@@ -475,27 +475,15 @@ jobs:
       - name: Generate image SBOM
         uses: anchore/sbom-action@v0
         with:
-          image: devopsshack/nodejs-app:${{ github.sha }}
+          image: ibrahimcentra/node-app:${{ github.sha }}
           format: spdx-json
           output-file: image-sbom.spdx.json
-          upload-artifact: true  
+          upload-artifact: true
           
       - name: Push
         uses: docker/build-push-action@v7
         with:
           push: true
           tags: |
-            devopsshack/nodejs-app:${{ github.sha }}
-            devopsshack/nodejs-app:latest
-
-
-
-
-
-
-
-
-
-
-
-    
+            ibrahimcentra/node-app:${{ github.sha }}
+            ibrahimcentra/node-app:latest
